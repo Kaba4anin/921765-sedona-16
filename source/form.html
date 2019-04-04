@@ -34,6 +34,77 @@
       <div class="logo-sedona">
         <img class="logo-sedona__image" src="http://placehold.it/150x100" alt="SEDONA">
       </div>
+      <section class="feedback">
+        <h2 class="feedback__headline">Оставьте свой отзыв</h2>
+        <p class="feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Представьтесь:</legend>
+            <p class="form__text">
+              <label class="form__label" for="user-name">ИМЯ*:</label>
+              <input class="form__input" type="text" name="user-name" id="user-name" value="Петр">
+            </p>
+            <p class="form__text">
+              <label class="form__label" for="user-surname">ФАМИЛИЯ*:</label>
+              <input class="form__input" type="text" name="user-surname" id="user-surname" value="Иванов">
+            </p>
+            <p class="form__text">
+              <label class="form__label" for="user-patronymic">Отчество:</label>
+              <input class="form__input" type="text" name="user-patronymic" id="user-patronymic" value="Александрович">
+            </p>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Контактная информация:</legend>
+            <p class="form__text">
+              <label class="form__label" for="contact-number">Контактный телефон*:</label>
+              <input class="form__input" type="text" name="contact-number" id="contact-number" value="Введите телефон">
+            </p>
+            <p class="form__text">
+              <label class="form__label" for="contact-email">Электронная почта*:</label>
+              <input class="form__input" type="text" name="contact-e-mail" id="contact-email" value="Введите e-mail">
+            </p>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Ваше Общее впечатление:</legend>
+            <p class="form__text">
+              <input class="form__input" type="radio" name="impression" id="positively" checked>
+              <label class="form__label" for="positively">Скорее положительное</label>
+            </p>
+            <p class="form__text">
+              <input class="form__input" type="radio" name="impression" id="negative">
+              <label class="form__label" for="negative">Скорее отрицательное</label>
+            </p>
+            <p class="form__text">
+              <input class="form__input" type="radio" name="impression" id="difficulty">
+              <label class="form__label" for="difficulty">Затрудняюсь ответить</label>
+            </p>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Посещенные достопримечательности:</legend>
+            <p class="form__text">
+              <input class="form__input" type="checkbox" name="devils-bridge" id="devils-bridge" checked>
+              <label class="form__label" for="devils-bridge">Мост Дьявола</label>
+            </p>
+            <p class="form__text">
+              <input class="form__input" type="checkbox" name="mountain-bell" id="mountain-bell" checked>
+              <label class="form__label" for="mountain-bell">Гора-Колокол</label>
+            </p>
+            <p class="form__text">
+              <input class="form__input" type="checkbox" name="slide-park" id="slide-park" checked>
+              <label class="form__label" for="slide-park">Слайд-парк</label>
+            </p>
+            <p class="form__text">
+              <input class="form__input" type="checkbox" name="red-rocks" id="red-rocks">
+              <label class="form__label" for="red-rocks">Красные скалы</label>
+            </p>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Опишите свои эмоции:</legend>
+            <textarea class="form__textarea" name="your-feedback">Опишите подробно все свои восторги</textarea>
+          </fieldset>
+          <button class="form__button">ОТПРАВИТЬ ОТЗЫВ</button>
+        </form>
+      </section>
     </main>
     <footer class="page-footer">
       <p class="page-footer__text">#visitsedona</p>
