@@ -1,0 +1,23 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.page-header__logo {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 46%;
+  }
+}

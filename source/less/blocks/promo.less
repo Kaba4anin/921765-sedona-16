@@ -1,12 +1,25 @@
 .promo__logo {
+  height: 389px;
   background-color: @sky;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
 
 .promo__text {
+  width: 255px;
+  margin: 0 auto;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   font-weight: 700;
   color: @secondary-color;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__logo {
+    height: 518px;
+  }
+
+  .promo__text {
+    width: 490px;
+  }
 }
