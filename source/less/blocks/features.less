@@ -1,5 +1,24 @@
+.features__list {
+  .indents;
+  display: flex;
+  flex-direction: column;
+}
+
+.features__items {
+  width: 210px;
+  margin: 0 auto;
+  list-style: none;
+}
+
 .features__headline {
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: flex;
+    flex-direction: row;
+  }
 }

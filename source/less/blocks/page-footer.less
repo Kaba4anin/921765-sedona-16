@@ -1,6 +1,27 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-footer__text {
+  margin: 0 auto;
   font-weight: 700;
   font-size: @font-size-headline;
   line-height: @line-height-secondary;
   color: @secondary-color;
+}
+
+.page-footer__social {
+  margin: 0 auto;
+}
+
+.page-footer__copyright {
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+  }
 }

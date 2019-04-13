@@ -1,7 +1,32 @@
 .site-list__link {
-  background-color: @blue;
   font-size: @font-size-secondary;
   line-height: @line-height-headline;
   font-weight: 700;
   color: @palette-primary;
+}
+
+.site-list__item {
+  background-color: @blue;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-around;
+    width: 768px;
+  }
+
+  .site-list__item {
+    background-color: transparent;
+  }
+
+  .site-list__link {
+    color: @secondary-color;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 1200px;
+  }
 }
