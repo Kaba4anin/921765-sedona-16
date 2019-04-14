@@ -1,10 +1,19 @@
+.more {
+  display: flex;
+  flex-direction: column;
+}
+
 .more__headline {
+  width: 250px;
+  margin: 0 auto;
   font-size: @font-size-headline;
   line-height: @line-height-secondary;
   color: @secondary-color;
 }
 
 .more__text {
+  width: 265px;
+  margin: 0 auto;
   line-height: @line-height-sparse;
 }
 
@@ -13,4 +22,10 @@
   font-size: @font-size-headline;
   line-height: @line-height-secondary;
   color: @palette-primary;
+}
+
+@media (min-width: @tablet-width) {
+  .more__text {
+    width: 434px;
+  }
 }

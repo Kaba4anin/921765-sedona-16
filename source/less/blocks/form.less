@@ -1,3 +1,13 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset {
+  border: none;
+  .indents;
+}
+
 .form__input {
   background-color: @for-input;
   font-weight: 700;
@@ -7,6 +17,7 @@
 }
 
 .form__textarea {
+  width: 100%;
   background-color: @for-input;
   font-weight: 700;
   font-size: @font-size-secondary;
@@ -23,6 +34,7 @@
 }
 
 .form__legend {
+  text-align: center;
   font-weight: 700;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
@@ -32,4 +44,59 @@
 .form__label {
   font-weight: 400;
   line-height: @line-height-secondary;
+}
+
+.form__label--color {
+  font-weight: 700;
+  text-transform: none;
+}
+
+.form__reference {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__fieldset {
+    width: 100%;
+  }
+
+  .form__fieldset:first-child,
+  .form__fieldset:nth-child(3) {
+    width: 50%;
+  }
+
+  .form__fieldset:nth-child(3) {
+    order: 1;
+  }
+
+  .form__fieldset:first-child {
+    order: 2;
+  }
+
+  .form__fieldset:nth-child(2) {
+    order: 3;
+  }
+
+  .form__fieldset:nth-child(4) {
+    order: 4;
+  }
+
+  .form__fieldset:nth-child(5) {
+    order: 5;
+  }
+
+  .form__button {
+    width: 50%;
+    order: 6;
+  }
+
+  .form__reference {
+    display: inline-block;
+    order: 7;
+  }
 }
