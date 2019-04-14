@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="conteiner">
+    <div class="container">
       <header class="page-header">
         <nav class="main-nav">
           <div class="main-nav__wrapper">
@@ -71,34 +71,34 @@
               <legend class="form__legend">Ваше Общее впечатление:</legend>
               <p class="form__text">
                 <input class="form__input" type="radio" name="impression" id="positively" checked>
-                <label class="form__label" for="positively">Скорее положительное</label>
+                <label class="form__label form__label--color" for="positively">Скорее положительное</label>
               </p>
               <p class="form__text">
                 <input class="form__input" type="radio" name="impression" id="negative">
-                <label class="form__label" for="negative">Скорее отрицательное</label>
+                <label class="form__label form__label--color" for="negative">Скорее отрицательное</label>
               </p>
               <p class="form__text">
                 <input class="form__input" type="radio" name="impression" id="difficulty">
-                <label class="form__label" for="difficulty">Затрудняюсь ответить</label>
+                <label class="form__label form__label--color" for="difficulty">Затрудняюсь ответить</label>
               </p>
             </fieldset>
             <fieldset class="form__fieldset">
               <legend class="form__legend">Посещенные достопримечательности:</legend>
               <p class="form__text">
                 <input class="form__input" type="checkbox" name="devils-bridge" id="devils-bridge" checked>
-                <label class="form__label" for="devils-bridge">Мост Дьявола</label>
+                <label class="form__label form__label--color" for="devils-bridge">Мост Дьявола</label>
               </p>
               <p class="form__text">
                 <input class="form__input" type="checkbox" name="mountain-bell" id="mountain-bell" checked>
-                <label class="form__label" for="mountain-bell">Гора-Колокол</label>
+                <label class="form__label form__label--color" for="mountain-bell">Гора-Колокол</label>
               </p>
               <p class="form__text">
                 <input class="form__input" type="checkbox" name="slide-park" id="slide-park" checked>
-                <label class="form__label" for="slide-park">Слайд-парк</label>
+                <label class="form__label form__label--color" for="slide-park">Слайд-парк</label>
               </p>
               <p class="form__text">
                 <input class="form__input" type="checkbox" name="red-rocks" id="red-rocks">
-                <label class="form__label" for="red-rocks">Красные скалы</label>
+                <label class="form__label form__label--color" for="red-rocks">Красные скалы</label>
               </p>
             </fieldset>
             <fieldset class="form__fieldset">
@@ -106,6 +106,7 @@
               <textarea class="form__textarea" name="your-feedback">Опишите подробно все свои восторги</textarea>
             </fieldset>
             <button class="form__button">ОТПРАВИТЬ ОТЗЫВ</button>
+            <p class="form__reference">* — обязательные поля</p>
           </form>
         </section>
       </main>

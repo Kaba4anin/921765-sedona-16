@@ -1,10 +1,25 @@
+.video {
+  display: flex;
+  flex-direction: column;
+}
+
 .video__headline {
+  width: 220px;
+  margin: 0 auto;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
 }
 
 .video__text {
+  width: 240px;
+  margin: 0 auto;
   line-height: @line-height-sparse;
   font-weight: 400;
+}
+
+@media (min-width: @tablet-width) {
+  .video__text {
+    width: 415px;
+  }
 }

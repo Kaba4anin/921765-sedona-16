@@ -1,10 +1,25 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+}
+
 .feedback__headline {
+  width: 195px;
+  margin: 0 auto;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
 }
 
 .feedback__text {
+  width: 276px;
+  margin: 0 auto;
   font-weight: 400;
   line-height: @line-height-sparse;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__text {
+    width: 439px;
+  }
 }
