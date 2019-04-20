@@ -1,6 +1,7 @@
 .more {
   display: flex;
   flex-direction: column;
+  padding-top: 26px;
 }
 
 .more__headline {
@@ -13,7 +14,7 @@
 
 .more__text {
   width: 265px;
-  margin: 0 auto;
+  margin: 19px auto 0;
   line-height: @line-height-sparse;
 }
 
@@ -22,10 +23,28 @@
   font-size: @font-size-headline;
   line-height: @line-height-secondary;
   color: @palette-primary;
+  margin-top: 35px;
+  margin-bottom: 49px;
+  padding: 16px;
 }
 
 @media (min-width: @tablet-width) {
+  .more__headline {
+    margin-top: 37px;
+  }
+
   .more__text {
     width: 434px;
+  }
+
+  .more__search {
+    margin-top: 63px;
+    margin-bottom: 43px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .more__search {
+    margin-bottom: 57px;
   }
 }

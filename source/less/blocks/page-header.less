@@ -1,23 +1,49 @@
+.page-header__logo-wrapper {
+  height: 56px;
+  position: relative;
+}
+
 .page-header {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .page-header__logo {
   position: absolute;
-  bottom: 0;
-  left: 30%;
+  top: 0;
+  left: 34%;
+}
+
+.page-header__logo-image {
+  width: 102px;
+  height: 83px;
 }
 
 @media (min-width: @tablet-width) {
+  .page-header__logo-wrapper {
+    height: 0;
+  }
+
   .page-header {
     position: relative;
   }
 
   .page-header__logo {
     position: absolute;
-    top: 0;
-    left: 46%;
+    top: -55px;
+    left: 43%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    left: 42%;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+  .page-header__logo-image {
+    width: 188px;
+    height: 96px;
   }
 }

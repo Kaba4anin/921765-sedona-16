@@ -6,7 +6,8 @@
 
 .gallery__headline {
   width: 200px;
-  margin: 0 auto;
+  margin: 37px auto 0;
+  text-align: center;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
@@ -14,37 +15,60 @@
 
 .gallery__text {
   width: 270px;
-  margin: 0 auto;
+  margin: 26px auto 27px;
+  text-align: center;
   font-weight: 400;
   font-size: @font-size-primary;
   line-height: @line-height-sparse;
 }
 
 .gallery__title {
+  margin: 14px auto -1px 0;
   font-size: @font-size-primary;
   line-height: @line-height-sparse;
   color: @secondary-color;
 }
 
 .gallery__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 415px;
   list-style: none;
+  border-top: 1px solid #ececec;
+  padding-left: 20px;
 }
 
 .gallery__author {
+  margin: 0 auto 9px 0;
   font-weight: 400;
   font-size: @font-size-primary;
   line-height: @line-height-sparse;
+  text-transform: none;
 }
 
 .gallery__like {
+  margin: 0 auto 17px 38px;
   font-size: @font-size-primary;
   line-height: @line-height-sparse;
   color: @secondary-color;
 }
 
 @media (min-width: @tablet-width) {
+  .gallery {
+    width: 648px;
+    margin: 0 auto 0;
+  }
+
+  .gallery__headline {
+    width: 211px;
+    margin: 74px auto 0;
+    font-size: 30px;
+  }
+
   .gallery__text {
     width: 428px;
+    margin: 31px auto 70px;
   }
 
   .gallery__list {
@@ -55,15 +79,47 @@
   }
 
   .gallery__item {
-    width: 324px;
+    background-color: #f2f2f2;
+    padding: 0 0 0 20px;
+    width: 304px;
+    height: 347px;
+    border: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-end;
   }
 
   .gallery__item:first-child {
-    width: 648px;
+    width: 100%;
+    height: 479px;
+  }
+
+  .gallery__title {
+    width: 100%;
+  }
+
+  .gallery__content {
+    width: 100%;
+  }
+
+  .gallery__author {
+    width: 50%;
+    margin: 0 0 17px 0;
+  }
+
+  .gallery__like {
+    width: 50%;
+    margin: 0;
+    text-align: right;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .gallery {
+    width: 1200px;
+  }
+
   .gallery__list {
     margin: 0 auto;
     flex-direction: row;
@@ -72,10 +128,22 @@
   }
 
   .gallery__item {
-    width: 400px;
+    width: 380px;
+    height: 267px;
+    color: #ffffff;
   }
 
   .gallery__item:first-child {
-    width: 1200px;
+    width: 100%;
+    height: 400px;
+  }
+
+  .gallery__title {
+    width: 100%;
+    color: #ffffff;
+  }
+
+  .gallery__headline {
+    margin: 111px auto 0;
   }
 }
