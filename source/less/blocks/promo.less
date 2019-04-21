@@ -1,9 +1,19 @@
+.promo__headline {
+  display: none;
+}
+
 .promo__logo {
-  height: 389px;
   background-color: @sky;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
-  background-position: center;
+  background-image: url("../../img/bg-intro-triangle-mobile.png"), url("../../img/bg-back-mobile@1x.jpg");
+  background-position: bottom, center;
   background-repeat: no-repeat;
+  text-align: center;
+}
+
+.promo__logo-image {
+  width: 281px;
+  height: 214px;
+  margin: 90px 0 79px;
 }
 
 .promo__text {
@@ -18,8 +28,11 @@
 
 @media (min-width: @tablet-width) {
   .promo__logo {
-    height: 518px;
-    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-image: url("../../img/bg-intro-triangle-tablet.svg"), url("../../img/bg-back-tablet@1x.jpg");
+  }
+
+  .promo__logo-image {
+    margin: 90px 0 209px;
   }
 
   .promo__text {
@@ -31,7 +44,7 @@
 
 @media (min-width: @desktop-width) {
   .promo__logo {
-    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-image: url("../../img/bg-intro-triangle-desktop.svg"), url("../../img/bg-back-desktop@1x.jpg");
   }
 
   .promo__text {

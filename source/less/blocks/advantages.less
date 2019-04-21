@@ -51,6 +51,10 @@
   color: @palette-primary;
 }
 
+.advantages__headline.advantages__headline--hidden {
+  display: none;
+}
+
 .advantages__block-size .advantages__headline {
   margin: 38px auto 0;
 }
@@ -70,12 +74,13 @@
 }
 
 ul .advantages__item {
+  position: relative;
   text-align: center;
-  height: 168px;
   background-color: @gray;
   list-style: none;
   display: flex;
   flex-direction: column;
+  padding-bottom: 23px;
 }
 
 li .advantages__headline {
@@ -86,6 +91,26 @@ li .advantages__headline {
 li .advantages__text {
   width: 257px;
   color: @primary-color;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+@media (max-width: @tablet-width) {
+  .advantages__block--mask {
+    background-image: url("../../img/white-copy-2.png");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  ul .advantages__item:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 1px;
+    right: 20px;
+    top: 167px;
+    background-color: #d7d7d7;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -102,19 +127,19 @@ li .advantages__text {
 
   .advantages__headline {
     width: 184px;
-    margin: 46px auto 10px;
+    margin: 46px auto 8px;
     font-size: @font-size-headline;
   }
 
   .advantages__text {
-    margin: 9px auto 20px;
+    margin: 8px auto 20px;
     width: 161px;
     line-height: 22px;
   }
 
   .advantages__subtitle {
     width: 490px;
-    margin: 29px auto 48px auto;
+    margin: 27px auto 50px auto;
   }
 
   .advantages__image {
@@ -130,8 +155,9 @@ li .advantages__text {
   ul .advantages__item {
     flex-direction: column;
     justify-content: flex-start;
-    height: 257px;
     flex-grow: 1;
+    width: 33.3%;
+    padding-bottom: 31px;
   }
 
   .advantages__image--order {
@@ -170,8 +196,8 @@ li .advantages__text {
     margin: 9px auto 11px;
   }
 
-  li:nth-child(1) .advantages__text {
-    width: 167px;
+  li .advantages__text--width {
+    width: 159px;
   }
 }
 
@@ -202,7 +228,7 @@ li .advantages__text {
   }
 
   .advantages__headline {
-    margin: 53px auto 10px;
+    margin: 53px auto 8px;
   }
 
   .advantages__text {
@@ -215,10 +241,18 @@ li .advantages__text {
   }
 
   li .advantages__text {
-    width: 283px;
+    width: 270px;
   }
 
   li:nth-child(1) .advantages__text {
     width: 283px;
+  }
+
+  ul .advantages__item {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    width: 33.3%;
+    padding-bottom: 53px;
   }
 }
