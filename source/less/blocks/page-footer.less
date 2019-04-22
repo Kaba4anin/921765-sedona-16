@@ -4,7 +4,7 @@
 }
 
 .page-footer__text {
-  margin: 0 auto;
+  margin: 36px auto 0;
   font-weight: 700;
   font-size: @font-size-headline;
   line-height: @line-height-secondary;
@@ -16,12 +16,30 @@
 }
 
 .page-footer__copyright {
-  margin: 0 auto;
+  margin: 37px 30%;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     display: flex;
     flex-direction: row;
+  }
+
+  .page-footer__text {
+    margin: 44px 8%;
+  }
+
+  .page-footer__copyright {
+    margin: auto 13% auto 9%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__text {
+    margin: 43px 10%;
+  }
+
+  .page-footer__copyright {
+    margin: auto 13% auto 11%;
   }
 }

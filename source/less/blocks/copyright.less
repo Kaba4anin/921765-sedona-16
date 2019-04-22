@@ -1,4 +1,42 @@
 .copyright__text {
   line-height: @line-height-secondary;
   color: @secondary-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 94px;
+    width: 41px;
+    height: 41px;
+    background-image: url("../../img/htmlacademy.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::after {
+      content: "";
+      background-image: url("../../img/htmlacademy-blue.svg");
+    }
+  }
+
+  &:active {
+    &::after {
+      content: "";
+      background-image: url("../../img/htmlacademy-gray.svg");
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__text::after {
+    bottom: -12px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    padding-right: 3px;
+  }
 }
