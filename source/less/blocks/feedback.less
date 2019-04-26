@@ -1,11 +1,12 @@
 .feedback {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .feedback__headline {
   width: 195px;
-  margin: 0 auto;
+  margin: 38px auto 0;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
@@ -13,13 +14,26 @@
 
 .feedback__text {
   width: 276px;
-  margin: 0 auto;
+  margin: 26px auto 17px;
   font-weight: 400;
   line-height: @line-height-sparse;
 }
 
 @media (min-width: @tablet-width) {
+  .feedback__headline {
+    width: 329px;
+    margin: 74px auto 0;
+    font-size: 31px;
+  }
+
   .feedback__text {
     width: 439px;
+    margin: 31px auto 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__headline {
+    margin-top: 112px;
   }
 }

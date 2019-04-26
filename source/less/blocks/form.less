@@ -6,23 +6,80 @@
 .form__fieldset {
   border: none;
   .indents;
+  margin: 19px 0 26px 0;
+}
+
+.form__text {
+  display: flex;
+  margin: 21px 0 0 0;
 }
 
 .form__input {
   background-color: @for-input;
-  font-weight: 700;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
+  padding: 16px 0 15px 21px;
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 14px;
+  border: none;
 }
 
 .form__textarea {
-  width: 100%;
+  width: 280px;
+  height: 160px;
   background-color: @for-input;
   font-weight: 700;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
+  margin: 17px auto;
+  border: none;
+  padding: 17px 20px 0;
+  resize: none;
+}
+
+.form__fieldset--contakt .form__text {
+  flex-wrap: wrap;
+}
+
+.form__fieldset--contakt .form__label {
+  margin: -1px 0 0 42px;
+}
+
+.form__fieldset--contakt .form__input {
+  margin-top: 8px;
+  margin-left: 20px;
+  margin-bottom: -8px;
+}
+
+.form__fieldset--radio {
+  margin-top: 29px;
+}
+
+.form__fieldset--radio .form__input {
+  display: none;
+}
+
+.form__fieldset--radio .form__label {
+  margin-left: 98px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  font-size: 18px;
+}
+
+.form__fieldset--checkbox {
+  margin-top: 29px;
+}
+
+.form__fieldset--checkbox .form__label {
+  font-size: 18px;
+  margin: 11px 0 21px 98px;
+}
+
+.form__fieldset--checkbox .form__input {
+  display: none;
 }
 
 .form__button {
@@ -31,10 +88,13 @@
   font-size: @font-size-headline;
   line-height: @line-height-secondary;
   color: @palette-primary;
+  padding: 16px 32px;
+  margin: 1px auto 38px;
+  border: none;
 }
 
 .form__legend {
-  text-align: center;
+  .indents;
   font-weight: 700;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
@@ -44,6 +104,7 @@
 .form__label {
   font-weight: 400;
   line-height: @line-height-secondary;
+  margin: 17px 0 0 19px;
 }
 
 .form__label--color {
@@ -53,6 +114,27 @@
 
 .form__reference {
   display: none;
+}
+
+.form__fieldset--textarea {
+  margin-top: 15px;
+  margin-bottom: 27px;
+}
+
+@media (max-width: @tablet-width) {
+  .form__fieldset {
+    position: relative;
+  }
+
+  .form__fieldset::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    width: 320px;
+    height: 1px;
+    background: #e7e7e7;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -65,7 +147,7 @@
     width: 100%;
 
     &:first-child {
-      width: 50%;
+      width: 49%;
       order: 2;
     }
 
@@ -88,12 +170,118 @@
   }
 
   .form__button {
-    width: 50%;
+    width: 42%;
     order: 6;
+    margin: 25px auto 61px 8%;
   }
 
   .form__reference {
     display: inline-block;
     order: 7;
+    margin: 46px 57px 0 0;
+  }
+
+  .form__fieldset--radio {
+    margin-top: 57px;
+    margin-left: 3px;
+  }
+
+  .form__legend {
+    font-size: 21px;
+  }
+
+  .form__fieldset--radio .form__label {
+    margin-left: 131px;
+    margin-top: 52px;
+    margin-bottom: -21px;
+  }
+
+  .form__fieldset--name .form__legend {
+    margin-bottom: 32px;
+    margin-left: -35px;
+    padding-right: 34px;
+  }
+
+  .form__fieldset--name {
+    margin-top: 57px;
+    margin-left: -35px;
+  }
+
+  .form__fieldset--name .form__text {
+    margin: 25px 0 -4px 88px;
+  }
+
+  .form__fieldset--name .form__label {
+    margin-left: 2px;
+  }
+
+  .form__fieldset--contakt {
+    margin-top: 49px;
+  }
+
+  .form__fieldset--contakt .form__input {
+    margin: 6px auto 2px;
+    width: 84%;
+  }
+
+  .form__fieldset--contakt .form__label {
+    margin: 3px 0 0 81px;
+  }
+
+  .form__fieldset--checkbox {
+    margin-top: 26px;
+  }
+
+  .form__fieldset--checkbox .form__legend {
+    width: 278px;
+  }
+
+  .form__textarea {
+    width: 85%;
+    margin: 56px auto 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__fieldset:nth-child(3) {
+    width: 46%;
+    margin-top: 41px;
+    margin-left: 69px;
+  }
+
+  .form__fieldset--radio .form__legend {
+    padding-right: 17px;
+  }
+
+  .form__fieldset:first-child {
+    width: 42%;
+    margin-top: 41px;
+    margin-left: -31px;
+  }
+
+  .form__fieldset:first-child .form__legend {
+    padding-right: 161px;
+  }
+
+  .form__fieldset:first-child .form__input {
+    margin-right: 14px;
+  }
+
+
+  .form__fieldset:nth-child(2) {
+    margin-top: 47px;
+  }
+
+  .form__textarea {
+    width: 80%;
+  }
+
+  .form__button {
+    width: 40%;
+    margin: 25px auto 65px 10%;
+  }
+
+  .form__reference {
+    margin: 46px 118px 0 0;
   }
 }
