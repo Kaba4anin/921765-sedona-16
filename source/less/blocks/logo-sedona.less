@@ -4,6 +4,11 @@
   background-repeat: no-repeat;
   background-position: bottom, -224px -230px;
   text-align: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../../img/bg-intro-triangle-mobile.png"), url("../../img/bg-back-mobile@2x.jpg");
+    background-size: 100%, 768px 389px;
+  }
 }
 
 .logo-sedona__image {
@@ -16,10 +21,17 @@
   .logo-sedona {
     background-image: url("../../img/bg-intro-triangle-tablet.svg"), url("../../img/bg-back-tablet@1x.jpg");
     background-position: bottom, 0 -228px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bg-intro-triangle-tablet.svg"), url("../../img/bg-back-tablet@2x.jpg");
+      background-size: 100%, 768px 518px;
+    }
   }
 
   .logo-sedona__image {
-    margin: 51px auto 193px;
+    width: 460px;
+    height: 80px;
+    margin: 94px auto 111px;
   }
 }
 
@@ -27,9 +39,14 @@
   .logo-sedona {
     background-image: url("../../img/bg-intro-triangle-desktop.svg"), url("../../img/bg-back-desktop@1x.jpg");
     background-position: bottom, 0 -217px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bg-intro-triangle-desktop.svg"), url("../../img/bg-back-desktop@2x.jpg");
+      background-size: 100%, 1200px 518px;
+    }
   }
 
   .logo-sedona__image {
-    margin: 51px auto 204px;
+    margin: 102px auto 113px;
   }
 }
