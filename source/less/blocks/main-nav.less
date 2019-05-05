@@ -4,15 +4,15 @@
   margin: 0 auto;
 }
 
+.main-nav--nojs {
+  display: none;
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
 
   list-style: none;
-}
-
-.main-nav__toggle {
-  position: absolute;
 }
 
 .main-nav__toggle--close {
@@ -28,16 +28,17 @@
   border: none;
 }
 
-
 .main-nav__toggle--open {
   content: "";
-  top: 240px;
-  right: 20px;
-  border: none;
+  position: absolute;
   width: 23px;
-  height: 5px;
-  background-color: #81b3d2;
-  box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2;
+  height: 22px;
+  top: 17px;
+  right: 20px;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
 }
 
 @media (min-width: @tablet-width) {

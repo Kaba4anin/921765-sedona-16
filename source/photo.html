@@ -9,7 +9,7 @@
   <body>
     <div class="site-wrapper container">
       <header class="page-header">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--nojs">
           <div class="main-nav__wrapper">
             <button class="main-nav__toggle main-nav__toggle--close" type="button"></button>
             <ul class="main-nav__list site-list">
@@ -27,7 +27,7 @@
               </li>
             </ul>
           </div>
-          <button class="main-nav__toggle main-nav__toggle--open" type="button"></button>
+          <button class="main-nav__toggle main-nav__toggle--open hidden" type="button"></button>
         </nav>
         <div class="page-header__logo-wrapper">
           <a class="page-header__logo">
@@ -51,43 +51,67 @@
           <ul class="gallery__list">
             <li class="gallery__item">
               <picture class="gallery__picture">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
                 <img class="gallery__content gallery__content--first" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы">
               </picture>
-              <h3 class="gallery__title">Неродные просторы</h3>
-              <p class="gallery__author">Автор фото: Борис</p>
-              <p class="gallery__like gallery__like--first">1350</p>
+              <div class="gallery__wrapper">
+                <h3 class="gallery__title gallery__title--first">Неродные просторы</h3>
+                <p class="gallery__author">Автор фото: Борис</p>
+                <p class="gallery__like gallery__like--first">1350</p>
+              </div>
             </li>
             <li class="gallery__item">
               <picture class="gallery__picture">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
                 <img class="gallery__content" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Местная растительность">
               </picture>
-              <h3 class="gallery__title">Местная растительность</h3>
-              <p class="gallery__author">Автор фото: Сергей</p>
-              <p class="gallery__like">143</p>
+              <div class="gallery__wrapper">
+                <h3 class="gallery__title">Местная растительность</h3>
+                <p class="gallery__author">Автор фото: Сергей</p>
+                <p class="gallery__like">143</p>
+              </div>
             </li>
             <li class="gallery__item">
               <picture class="gallery__picture">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
                 <img class="gallery__content" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на север">
               </picture>
-              <h3 class="gallery__title">Дорога на север</h3>
-              <p class="gallery__author">Автор фото: Петр</p>
-              <p class="gallery__like">96</p>
+              <div class="gallery__wrapper">
+                <h3 class="gallery__title">Дорога на север</h3>
+                <p class="gallery__author">Автор фото: Петр</p>
+                <p class="gallery__like">96</p>
+              </div>
             </li>
             <li class="gallery__item">
               <picture class="gallery__picture">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
                 <img class="gallery__content" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Мост дьявола">
               </picture>
-              <h3 class="gallery__title">Мост дьявола</h3>
-              <p class="gallery__author">Автор фото: Антон</p>
-              <p class="gallery__like">254</p>
+              <div class="gallery__wrapper">
+                <h3 class="gallery__title">Мост дьявола</h3>
+                <p class="gallery__author">Автор фото: Антон</p>
+                <p class="gallery__like">254</p>
+              </div>
             </li>
           </ul>
         </section>
@@ -95,10 +119,32 @@
           <h2 class="video__headline">Все еще сомневаетесь?</h2>
           <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           <picture class="video__picture">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+
             <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img class="video__poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="321" height="201" alt="Видеопрезентация">
           </picture>
+          <div class="video__controls">
+            <button class="video__button video__button--replay">
+              <svg class="video__icon" width="16" height="20">
+                <use xlink:href="img/sprite.svg#icon-replay"></use>
+              </svg>
+            </button>
+            <div class="video__progress"></div>
+            <button class="video__button video__button--subtitles">
+              <svg class="video__icon" width="32" height="20">
+                <use xlink:href="img/sprite.svg#icon-subtitles"></use>
+              </svg>
+            </button>
+            <button class="video__button video__button--fullscreen">
+              <svg class="video__icon" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-fullscreen"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </main>
       <footer class="page-footer">
@@ -107,27 +153,17 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-                  <g id="W6EeEF_1_">
-                    <g>
-                      <path fill="#ffffff"  fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
-                    </g>
-                  </g>
-                </svg>
+                <svg class="social__icon-comb" width="19" height="15"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
-                  <path fill="#ffffff" d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
-                </svg>
+                <svg class="social__icon-comb" width="9" height="19"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube" href="#">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
-                  <path fill="#ffffff"  d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
-                </svg>
+                <svg class="social__icon-comb" width="20" height="14"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
               </a>
             </li>
           </ul>
@@ -138,5 +174,36 @@
         </div>
       </footer>
     </div>
+    <script>
+      var mainNavigation = document.querySelector(".main-nav");
+
+      var mainNavaigationItems = mainNavigation.querySelector(".main-nav__list");
+      var btnOpenNavigation = mainNavigation.querySelector(".main-nav__toggle--open");
+      var btnCloseNavigation = mainNavigation.querySelector(".main-nav__toggle--close");
+
+      mainNavigation.classList.remove("main-nav--nojs");
+
+      btnOpenNavigation.addEventListener("click", function() {
+
+        if (mainNavaigationItems.classList.contains("hidden")) {
+
+          mainNavaigationItems.classList.remove("hidden");
+
+          btnOpenNavigation.classList.add("hidden");
+          btnCloseNavigation.classList.remove("hidden");
+        }
+      });
+
+      btnCloseNavigation.addEventListener("click", function() {
+
+        if (!mainNavaigationItems.classList.contains("hidden")) {
+
+          mainNavaigationItems.classList.add("hidden");
+
+          btnOpenNavigation.classList.remove("hidden");
+          btnCloseNavigation.classList.add("hidden");
+        }
+      });
+    </script>
   </body>
 </html>

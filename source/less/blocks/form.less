@@ -6,7 +6,7 @@
 .form__fieldset {
   border: none;
   .indents;
-  margin: 19px 0 26px 0;
+  margin: 20px 0 28px 0;
   padding: 0 20px;
 }
 
@@ -23,6 +23,15 @@
   padding: 16px 0 15px 21px;
   width: 100%;
   border: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+  }
 }
 
 .form__textarea {
@@ -44,13 +53,32 @@
   margin-left: 13px;
 }
 
-.form__fieldset--contakt {
-  padding-right: 0;
-}
-
 .form__fieldset--contakt .form__text {
   flex-wrap: wrap;
   margin-top: 14px;
+  position: relative;
+}
+
+.form__fieldset--contakt .form__text::before {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 56px;
+  top: 29px;
+  left: 221px;
+  background-color: #e6e6e6;
+}
+
+.form__fieldset--contakt .form__text:nth-child(1)::before {
+  background-image: url("../../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 21px 18px;
+}
+
+.form__fieldset--contakt .form__text:nth-child(2)::before {
+  background-image: url("../../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 21px 21px;
 }
 
 .form__fieldset--contakt .form__label {
@@ -65,18 +93,6 @@
   word-spacing: 4px;
   letter-spacing: -1px;
   margin-top: 6px;
-  width: 220px;
-}
-
-.form__fieldset--contakt .form__button {
-  .indents;
-  width: 58px;
-  height: 58px;
-  margin-top: 5px;
-  padding-top: 3px;
-  padding-left: 3px;
-  background-color: #e6e6e6;
-  border: none;
 }
 
 .form__fieldset--radio {
@@ -112,9 +128,16 @@
   border-radius: 50%;
 }
 
+.form__fieldset--radio .form__label:hover::before {
+  background-color: #e5e5e5;
+}
+
+.form__fieldset--radio .form__label:active::before {
+  background-color: #d5d5d5;
+}
+
 .form__input--radio:checked + label::after {
   content: "";
-
   position: absolute;
   width: 21px;
   height: 21px;
@@ -122,6 +145,11 @@
   left: -61px;
   background-color: #333333;
   border-radius: 50%;
+}
+
+.form__input--radio:checked + label:active::after {
+  opacity: 0.3;
+  background-color: #333333;
 }
 
 .form__fieldset--checkbox {
@@ -145,6 +173,14 @@
   border-radius: 5px;
 }
 
+.form__fieldset--checkbox .form__label:hover::before {
+  background-color: #e5e5e5;
+}
+
+.form__fieldset--checkbox .form__label:active::before {
+  background-color: #d5d5d5;
+}
+
 .form__input--checkbox:checked + label::after {
   content: "";
   position: absolute;
@@ -155,6 +191,10 @@
   background-image: url("../../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.form__input--checkbox:checked + label:active::after {
+  opacity: 0.3;
 }
 
 .form__fieldset--checkbox .form__input {
@@ -269,18 +309,18 @@
   .form__button--main {
     display: inline-block;
     order: 6;
-    margin: 53px auto 61px 0;
+    margin: 55px auto 61px 0;
     padding: 16px 76px 16px 65px;
   }
 
   .form__reference {
     display: block;
     order: 7;
-    margin: 74px 0 0 0;
+    margin: 75px 0 0 0;
   }
 
   .form__fieldset--radio {
-    margin-top: 57px;
+    margin-top: 59px;
   }
 
   .form__fieldset--radio .form__legend {
@@ -310,7 +350,7 @@
 
   .form__fieldset--name {
     position: relative;
-    margin-top: 57px;
+    margin-top: 59px;
     padding-left: 57px;
     padding-right: 0;
 
@@ -336,12 +376,11 @@
   .form__fieldset--contakt {
     .indents;
     text-align: center;
-    margin-top: 45px;
+    margin-top: 44px;
   }
 
   .form__fieldset--contakt .form__input {
     margin: 7px 0 2px;
-    width: 590px;
   }
 
   .form__fieldset--contakt .form__label {
@@ -351,15 +390,16 @@
 
   .form__fieldset--contakt .form__text {
     width: 100%;
-    margin-top: 23px;
+    margin-top: 25px;
   }
 
   .form__fieldset--contakt .form__legend {
     .indents;
   }
 
-  .form__fieldset--contakt .form__button {
-    margin-top: 7px;
+  .form__fieldset--contakt .form__text::before {
+    top: 33px;
+    left: 589px;
   }
 
   .form__fieldset--checkbox {
@@ -378,7 +418,7 @@
 
   .form__fieldset--checkbox .form__text {
     width: 50%;
-    margin-top: 55px;
+    margin-top: 56px;
     margin-bottom: 8px;
   }
 
@@ -433,7 +473,7 @@
 
   .form__fieldset--textarea {
     .indents;
-    margin-top: 76px;
+    margin-top: 77px;
     text-align: center;
 
     &::before,
@@ -455,7 +495,7 @@
   .form__popups {
     content: "";
     position: absolute;
-    display: block;
+    display: none;
     background-color: #ffffff;
     box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
     padding-top: 39px;
@@ -608,6 +648,14 @@
     padding-left: 52px;
   }
 
+  .form__fieldset--radio .form__text {
+    margin-top: 38px;
+  }
+
+  .form__fieldset--name .form__text {
+    margin-top: 22px;
+  }
+
   .form__fieldset--contakt .form__text {
     width: 47%;
     flex-wrap: nowrap;
@@ -639,8 +687,17 @@
     width: 84px;
   }
 
+  .form__fieldset--contakt .form__text::before {
+    top: 6px;
+    left: 350px;
+  }
+
+  .form__fieldset--contakt .form__text:nth-child(2)::before {
+    left: 427px;
+  }
+
   .form__fieldset--contakt .form__input {
-    width: 53%;
+    width: 65%;
     margin-left: 9px;
   }
 

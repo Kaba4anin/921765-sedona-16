@@ -2,12 +2,13 @@
   .indents;
   list-style: none;
   display: flex;
+  margin-top: 38px;
 }
 
 .social__item {
   width: 46px;
   height: 47px;
-  margin: 36px 3px 7px;
+  margin: 0 3px 7px;
   padding-top: 14px;
   background-color: #81b3d2;
   text-align: center;
@@ -18,5 +19,19 @@
 
   &:active {
     background-color: #5496bd;
+  }
+}
+
+.social__icon-comb {
+  fill: #ffffff;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    margin-top: 0;
   }
 }
