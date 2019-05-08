@@ -567,6 +567,22 @@
     padding: 18px 122px 19px;
     margin: 8px auto 49px;
   }
+
+  .form__popups--show {
+    display: block;
+    animation: zoomin 0.5s;
+  }
+
+  @keyframes zoomin {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {

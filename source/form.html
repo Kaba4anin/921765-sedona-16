@@ -122,13 +122,13 @@
               <h2 class="form__headline">Ваш отзыв отправлен!</h2>
               <p class="form__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
               <div class="form__close--wrapper">
-                <a href="#" class="form__close">ЗАКРЫТЬ ОКНО</a>
+                <a href="#" class="form__close form__close--cancel">ЗАКРЫТЬ ОКНО</a>
               </div>
             </div>
             <div class="form__popups form__popups--mistake">
               <h2 class="form__headline">Что-то пошло не так!</h2>
               <p class="form__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-              <a href="#" class="form__close">ОК</a>
+              <a href="#" class="form__close form__close--ok">ОК</a>
             </div>
             <p class="form__reference">* — обязательные поля</p>
           </form>
@@ -191,6 +191,45 @@
           btnCloseNavigation.classList.add("hidden");
         }
       });
+
+
+      //всплывающие окна
+      var form = document.querySelector(".form");
+
+      if (form) {
+
+        var submitButton = form.querySelector(".form__button--main");
+
+        var failureDialog = document.querySelector(".form__popups--mistake");
+        var successDialog = document.querySelector(".form__popups--successfully");
+
+        submitButton.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (recallForm.checkValidity()) {
+            successDialog.classList.add("form__popups--show");
+
+          } else {
+            failureDialog.classList.add("form__popups--show");
+          }
+        });
+
+        var failureDialogOk = failureDialog.querySelector(".form__close--ok");
+
+        failureDialogOk.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          failureDialog.classList.remove("form__popups--show");
+        })
+
+        var successDialogCancel = successDialog.querySelector(".form__close--cancel");
+
+        successDialogCancel.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          successDialog.classList.remove("form__popups--show");
+        })
+      }
     </script>
   </body>
 </html>
