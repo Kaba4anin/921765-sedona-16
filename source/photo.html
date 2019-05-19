@@ -2,11 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <div class="site-wrapper container">
       <header class="page-header">
         <nav class="main-nav main-nav--nojs">
@@ -130,18 +135,18 @@
           <div class="video__controls">
             <button class="video__button video__button--replay">
               <svg class="video__icon" width="16" height="20">
-                <use xlink:href="img/sprite.svg#icon-replay"></use>
+                <use xlink:href="img/sprite.svg#icon-video-replay"></use>
               </svg>
             </button>
             <div class="video__progress"></div>
             <button class="video__button video__button--subtitles">
               <svg class="video__icon" width="32" height="20">
-                <use xlink:href="img/sprite.svg#icon-subtitles"></use>
+                <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
               </svg>
             </button>
             <button class="video__button video__button--fullscreen">
               <svg class="video__icon" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-fullscreen"></use>
+                <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
               </svg>
             </button>
           </div>
@@ -174,36 +179,7 @@
         </div>
       </footer>
     </div>
-    <script>
-      var mainNavigation = document.querySelector(".main-nav");
-
-      var mainNavaigationItems = mainNavigation.querySelector(".main-nav__list");
-      var btnOpenNavigation = mainNavigation.querySelector(".main-nav__toggle--open");
-      var btnCloseNavigation = mainNavigation.querySelector(".main-nav__toggle--close");
-
-      mainNavigation.classList.remove("main-nav--nojs");
-
-      btnOpenNavigation.addEventListener("click", function() {
-
-        if (mainNavaigationItems.classList.contains("hidden")) {
-
-          mainNavaigationItems.classList.remove("hidden");
-
-          btnOpenNavigation.classList.add("hidden");
-          btnCloseNavigation.classList.remove("hidden");
-        }
-      });
-
-      btnCloseNavigation.addEventListener("click", function() {
-
-        if (!mainNavaigationItems.classList.contains("hidden")) {
-
-          mainNavaigationItems.classList.add("hidden");
-
-          btnOpenNavigation.classList.remove("hidden");
-          btnCloseNavigation.classList.add("hidden");
-        }
-      });
+    <script src="js/script.min.js">
     </script>
   </body>
 </html>

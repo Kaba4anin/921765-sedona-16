@@ -2,11 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <div class="site-wrapper container">
       <header class="page-header">
         <nav class="main-nav main-nav--nojs">
@@ -53,15 +58,15 @@
               <legend class="form__legend">Представьтесь:</legend>
               <p class="form__text">
                 <label class="form__label" for="user-name">ИМЯ*:</label>
-                <input class="form__input" type="text" name="user-name" id="user-name" value="Петр">
+                <input class="form__input" type="text" name="user-name" id="user-name" required="" placeholder="Петр">
               </p>
               <p class="form__text">
                 <label class="form__label" for="user-surname">ФАМИЛИЯ*:</label>
-                <input class="form__input" type="text" name="user-surname" id="user-surname" value="Иванов">
+                <input class="form__input" type="text" name="user-surname" id="user-surname" required="" placeholder="Иванов">
               </p>
               <p class="form__text">
                 <label class="form__label" for="user-patronymic">Отчество:</label>
-                <input class="form__input" type="text" name="user-patronymic" id="user-patronymic" value="Александрович">
+                <input class="form__input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Александрович">
               </p>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--contakt">
@@ -69,18 +74,18 @@
               <div class="form__wrapper">
                 <p class="form__text">
                   <label class="form__label" for="contact-number"><span>Контактный</span> телефон*:</label>
-                  <input class="form__input" type="text" name="contact-number" id="contact-number" value="Введите телефон">
+                  <input class="form__input" type="number" name="contact-number" id="contact-number" required="" placeholder="Введите телефон">
                 </p>
                 <p class="form__text">
                   <label class="form__label" for="contact-email">Электронная почта*:</label>
-                  <input class="form__input" type="text" name="contact-e-mail" id="contact-email" value="Введите e-mail">
+                  <input class="form__input" type="email" name="contact-e-mail" id="contact-email" required="" placeholder="Введите e-mail">
                 </p>
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--radio">
               <legend class="form__legend">Ваше Общее впечатление:</legend>
               <p class="form__text">
-                <input class="form__input form__input--radio" type="radio" name="impression" id="positively" checked>
+                <input class="form__input form__input--radio" type="radio" name="impression" id="positively" checked="">
                 <label class="form__label form__label--color" for="positively">Скорее положительное</label>
               </p>
               <p class="form__text">
@@ -96,15 +101,15 @@
               <legend class="form__legend">Посещенные достопримечательности:</legend>
               <div class="form__wrapper">
                 <p class="form__text">
-                  <input class="form__input form__input--checkbox" type="checkbox" name="devils-bridge" id="devils-bridge" checked>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="devils-bridge" id="devils-bridge" checked="">
                   <label class="form__label form__label--color" for="devils-bridge">Мост Дьявола</label>
                 </p>
                 <p class="form__text">
-                  <input class="form__input form__input--checkbox" type="checkbox" name="mountain-bell" id="mountain-bell" checked>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="mountain-bell" id="mountain-bell" checked="">
                   <label class="form__label form__label--color" for="mountain-bell">Гора-Колокол</label>
                 </p>
                 <p class="form__text">
-                  <input class="form__input form__input--checkbox" type="checkbox" name="slide-park" id="slide-park" checked>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="slide-park" id="slide-park" checked="">
                   <label class="form__label form__label--color" for="slide-park">Слайд-парк</label>
                 </p>
                 <p class="form__text">
@@ -115,7 +120,7 @@
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--textarea">
               <legend class="form__legend">Опишите свои эмоции:</legend>
-              <textarea class="form__textarea" name="your-feedback">Опишите подробно все свои восторги</textarea>
+              <textarea class="form__textarea" name="your-feedback" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button class="form__button--main">ОТПРАВИТЬ ОТЗЫВ</button>
             <div class="form__popups form__popups--successfully">
@@ -161,75 +166,7 @@
         </div>
       </footer>
     </div>
-    <script>
-      var mainNavigation = document.querySelector(".main-nav");
-
-      var mainNavaigationItems = mainNavigation.querySelector(".main-nav__list");
-      var btnOpenNavigation = mainNavigation.querySelector(".main-nav__toggle--open");
-      var btnCloseNavigation = mainNavigation.querySelector(".main-nav__toggle--close");
-
-      mainNavigation.classList.remove("main-nav--nojs");
-
-      btnOpenNavigation.addEventListener("click", function() {
-
-        if (mainNavaigationItems.classList.contains("hidden")) {
-
-          mainNavaigationItems.classList.remove("hidden");
-
-          btnOpenNavigation.classList.add("hidden");
-          btnCloseNavigation.classList.remove("hidden");
-        }
-      });
-
-      btnCloseNavigation.addEventListener("click", function() {
-
-        if (!mainNavaigationItems.classList.contains("hidden")) {
-
-          mainNavaigationItems.classList.add("hidden");
-
-          btnOpenNavigation.classList.remove("hidden");
-          btnCloseNavigation.classList.add("hidden");
-        }
-      });
-
-
-      //всплывающие окна
-      var form = document.querySelector(".form");
-
-      if (form) {
-
-        var submitButton = form.querySelector(".form__button--main");
-
-        var failureDialog = document.querySelector(".form__popups--mistake");
-        var successDialog = document.querySelector(".form__popups--successfully");
-
-        submitButton.addEventListener("click", function(event) {
-          event.preventDefault();
-
-          if (recallForm.checkValidity()) {
-            successDialog.classList.add("form__popups--show");
-
-          } else {
-            failureDialog.classList.add("form__popups--show");
-          }
-        });
-
-        var failureDialogOk = failureDialog.querySelector(".form__close--ok");
-
-        failureDialogOk.addEventListener("click", function(event) {
-          event.preventDefault();
-
-          failureDialog.classList.remove("form__popups--show");
-        })
-
-        var successDialogCancel = successDialog.querySelector(".form__close--cancel");
-
-        successDialogCancel.addEventListener("click", function(event) {
-          event.preventDefault();
-
-          successDialog.classList.remove("form__popups--show");
-        })
-      }
+    <script src="js/script.min.js">
     </script>
   </body>
 </html>
