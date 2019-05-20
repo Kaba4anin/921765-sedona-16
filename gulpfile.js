@@ -34,8 +34,11 @@ gulp.task("css", function () {
 
 gulp.task("scripts", function() {
   return gulp.src("source/js/script.js")
-    .pipe(minify())
-    .pipe(rename("script.min.js"))
+    .pipe(minify({
+      ext: {
+        min: ".min.js"
+      }
+    }))
     .pipe(gulp.dest("build/js"));
 });
 
@@ -67,7 +70,7 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(htmlmin())
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
