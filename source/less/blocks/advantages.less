@@ -16,7 +16,7 @@
 
 .advantages__block {
   text-align: center;
-  padding-bottom: 38px;
+  padding-bottom: 36px;
 }
 
 .advantages__image--city {
@@ -43,7 +43,7 @@
 
 .advantages__subtitle {
   width: 255px;
-  margin: 28px auto 5px auto;
+  margin: 26px auto 5px auto;
   line-height: @line-height-secondary;
   text-align: center;
 }
@@ -65,6 +65,9 @@
 }
 
 .advantages__text {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
   width: 273px;
   margin: 10px auto 0 auto;
   font-size: @font-size-primary;
@@ -90,7 +93,7 @@ ul .advantages__item {
 
 li .advantages__headline {
   color: @secondary-color;
-  margin-top: 28px;
+  margin-top: 25px;
 }
 
 li .advantages__text {
@@ -100,7 +103,7 @@ li .advantages__text {
   margin-bottom: 2px;
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: 767px) {
   .advantages__block--mask {
     background-image: url("../../img/white-copy-2.png");
     background-position: top;
@@ -144,7 +147,7 @@ li .advantages__text {
 
   .advantages__subtitle {
     width: 490px;
-    margin: 27px auto 51px auto;
+    margin: 27px auto 50px auto;
   }
 
   .advantages__image {
@@ -162,7 +165,7 @@ li .advantages__text {
     justify-content: flex-start;
     flex-grow: 1;
     width: 33.3%;
-    padding-bottom: 35px;
+    padding-bottom: 31px;
   }
 
   .advantages__image--order {
@@ -270,7 +273,7 @@ li .advantages__text {
     width: 270px;
   }
 
-  li:nth-child(1) .advantages__text {
+  .advantages__item:nth-child(1) .advantages__text {
     width: 283px;
   }
 
@@ -279,6 +282,6 @@ li .advantages__text {
     justify-content: flex-start;
     flex-grow: 1;
     width: 33.3%;
-    padding-bottom: 56px;
+    padding-bottom: 53px;
   }
 }

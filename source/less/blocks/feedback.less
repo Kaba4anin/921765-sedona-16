@@ -5,8 +5,7 @@
 }
 
 .feedback__headline {
-  width: 195px;
-  margin: 41px auto 0;
+  margin: 38px auto 0;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
@@ -14,14 +13,20 @@
 
 .feedback__text {
   width: 276px;
-  margin: 26px auto 18px;
+  margin: 26px auto 20px;
   font-weight: 400;
   line-height: @line-height-sparse;
 }
 
+@media (max-width: 767px) {
+  .feedback__headline {
+    width: 195px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .feedback__headline {
-    width: 329px;
+    //width: 333px;
     margin: 74px auto 0;
     font-size: 31px;
   }

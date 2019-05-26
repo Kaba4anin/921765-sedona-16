@@ -6,7 +6,7 @@
 .form__fieldset {
   border: none;
   .indents;
-  margin: 20px 0 28px 0;
+  margin: 17px 0 27px;
   padding: 0 20px;
 }
 
@@ -52,6 +52,10 @@
   margin-left: 13px;
 }
 
+.form__fieldset--name .form__legend {
+  margin-left: 71px;
+}
+
 .form__fieldset--contakt .form__text {
   flex-wrap: wrap;
   margin-top: 14px;
@@ -63,7 +67,7 @@
   position: absolute;
   width: 57px;
   height: 54px;
-  top: 32px;
+  top: 34px;
   left: 223px;
   background-color: #e6e6e6;
 }
@@ -90,7 +94,7 @@
 
 .form__fieldset--contakt .form__input {
   word-spacing: 4px;
-  margin-top: 6px;
+  margin-top: 7px;
 }
 
 .form__fieldset--radio {
@@ -151,13 +155,19 @@
 }
 
 .form__fieldset--checkbox {
-  margin-top: 36px;
+  margin-top: 33px;
 }
 
 .form__fieldset--checkbox .form__label {
   position: relative;
   font-size: 18px;
   margin: 12px 0 21px 78px;
+}
+
+.form__fieldset--checkbox .form__legend {
+  margin-left: 17px;
+  width: 263px;
+  text-align: center;
 }
 
 .form__fieldset--checkbox .form__label::before {
@@ -207,7 +217,7 @@
   font-family: inherit;
   color: @palette-primary;
   padding: 16px 49px;
-  margin: 1px auto 38px;
+  margin: 1px 18px 35px;
   border: none;
 
   &:hover {
@@ -226,6 +236,8 @@
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   color: @secondary-color;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form__label {
@@ -248,11 +260,7 @@
   margin-bottom: 27px;
 }
 
-.form__popups {
-  display: none;
-}
-
-@media (max-width: @tablet-width) {
+@media (max-width: 767px) {
   .form__fieldset {
     position: relative;
   }
@@ -307,14 +315,14 @@
   .form__button--main {
     display: inline-block;
     order: 6;
-    margin: 55px auto 61px 0;
+    margin: 52px auto 63px 0;
     padding: 16px 76px 16px 65px;
   }
 
   .form__reference {
     display: block;
     order: 7;
-    margin: 75px 0 0 0;
+    margin: 73px 0 0;
   }
 
   .form__fieldset--radio {
@@ -344,6 +352,7 @@
 
   .form__fieldset--name .form__legend {
     margin-bottom: 36px;
+    margin-left: 1px;
   }
 
   .form__fieldset--name {
@@ -374,7 +383,7 @@
   .form__fieldset--contakt {
     .indents;
     text-align: center;
-    margin-top: 44px;
+    margin-top: 42px;
   }
 
   .form__fieldset--contakt .form__input {
@@ -388,7 +397,7 @@
 
   .form__fieldset--contakt .form__text {
     width: 100%;
-    margin-top: 25px;
+    margin-top: 23px;
   }
 
   .form__fieldset--contakt .form__legend {
@@ -412,6 +421,7 @@
 
   .form__fieldset--checkbox .form__legend {
     width: 278px;
+    margin-left: 181px;
   }
 
   .form__fieldset--checkbox .form__text {
@@ -471,7 +481,7 @@
 
   .form__fieldset--textarea {
     .indents;
-    margin-top: 77px;
+    margin-top: 74px;
     text-align: center;
 
     &::before,
@@ -487,99 +497,11 @@
 
   .form__textarea {
     width: 100%;
-    margin: 56px auto 0;
-  }
-
-  .form__popups {
-    content: "";
-    position: absolute;
-    display: none;
-    background-color: #ffffff;
-    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
-    padding-top: 39px;
-  }
-
-  .form__close {
-    background-color: #81b3d2;
-    display: inline-block;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: @font-size-headline;
-
-    &:hover {
-      background-color: #669ec0;
-    }
-
-    &:active {
-      background-color: #5496bd;
-      color: rgba(255, 255, 255, 0.3);
-    }
+    margin: 58px auto 0;
   }
 
   .form__text {
     line-height: 24px;
-  }
-
-  .form__close--wrapper {
-    background-color: #f2f2f2;
-  }
-
-  .form__popups--successfully {
-    top: 467px;
-    right: 64px;
-    width: 639px;
-  }
-
-  .form__popups .form__headline {
-    font-size: 30px;
-  }
-
-  .form__popups--successfully .form__text {
-    width: 424px;
-    margin: 34px auto 34px;
-  }
-
-  .form__popups--successfully .form__close {
-    margin: 44px auto;
-    padding: 18px 154px;
-  }
-
-  .form__popups--mistake {
-    top: 888px;
-    width: 400px;
-    left: 184px;
-  }
-
-  .form__popups--mistake .form__headline {
-    width: 221px;
-    margin: 17px auto;
-    line-height: 40px;
-  }
-
-  .form__popups--mistake .form__text {
-    width: 277px;
-    margin: 23px auto 25px;
-  }
-
-  .form__popups--mistake .form__close {
-    padding: 18px 122px 19px;
-    margin: 8px auto 49px;
-  }
-
-  .form__popups--show {
-    display: block;
-    animation: zoomin 0.5s;
-  }
-
-  @keyframes zoomin {
-    from {
-      opacity: 0;
-      transform: scale3d(0.3, 0.3, 0.3);
-    }
-
-    50% {
-      opacity: 1;
-    }
   }
 }
 
@@ -605,7 +527,7 @@
   }
 
   .form__fieldset:nth-child(2) {
-    margin-top: 42px;
+    margin-top: 41px;
   }
 
   .form__textarea {
@@ -667,7 +589,7 @@
   }
 
   .form__fieldset--name .form__text {
-    margin-top: 22px;
+    margin-top: 21px;
   }
 
   .form__fieldset--contakt .form__text {
@@ -679,6 +601,14 @@
     .indents;
     width: 159px;
     margin-top: 24px;
+  }
+
+  .form__fieldset--contakt .form__legend {
+    margin-left: 397px;
+  }
+
+  .form__label {
+    margin-top: 13px;
   }
 
   .form__fieldset--checkbox .form__label::before {
@@ -702,8 +632,8 @@
   }
 
   .form__fieldset--contakt .form__text::before {
-    top: 9px;
-    left: 349px;
+    top: 8px;
+    left: 350px;
   }
 
   .form__fieldset--contakt .form__text:nth-child(2)::before {
@@ -750,13 +680,7 @@
     display: none;
   }
 
-  .form__popups--successfully {
-    top: 349px;
-    right: 281px;
-  }
-
-  .form__popups--mistake {
-    top: 800px;
-    left: 400px;
+  .form__fieldset--checkbox .form__legend {
+    margin-left: 398px;
   }
 }

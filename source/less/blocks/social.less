@@ -5,10 +5,11 @@
   margin-top: 38px;
 }
 
-.social__item {
+.social__link {
+  display: block;
   width: 46px;
   height: 47px;
-  margin: 0 3px 7px;
+  margin: -5px 3px 7px;
   padding-top: 14px;
   background-color: #81b3d2;
   text-align: center;
@@ -24,14 +25,18 @@
 
 .social__icon-comb {
   fill: #ffffff;
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.social__link:active .social__icon-comb {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .social__list {
     margin-top: 0;
+  }
+
+  .social__link {
+    margin-top: 1px;
   }
 }

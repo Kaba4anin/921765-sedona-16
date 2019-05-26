@@ -13,7 +13,7 @@
 
 .video__text {
   width: 240px;
-  margin: 26px auto 38px;
+  margin: 26px auto 35px;
   line-height: @line-height-sparse;
   font-weight: 400;
 }
@@ -33,17 +33,21 @@
 }
 
 .video__button {
-  width: 70px;
-  min-height: 66px;
   line-height: 0;
   background: 0 0;
   border: none;
-  outline: none;
+  margin: 20px;
 }
 
 .video__button--subtitles {
   width: 40px;
-  margin-left: auto;
+  margin-left: 92px;
+  margin-right: 3px;
+}
+
+.video__button--fullscreen {
+  margin-right: 17px;
+  margin-left: 13px;
 }
 
 .video__progress {
@@ -86,6 +90,7 @@
     fill: #333333;
   }
 
+  &:focus,
   &:active {
     opacity: 0.3;
   }
@@ -100,7 +105,7 @@
   .video__text {
     width: 415px;
     margin-top: 31px;
-    margin-bottom: 75px;
+    margin-bottom: 71px;
   }
 
   .video__headline {
@@ -117,21 +122,23 @@
   .video__controls {
     top: -4px;
     min-height: 93px;
-    margin: -93px 0 0;
+    margin: -94px 0 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
 
   .video__button {
-    width: 90px;
-    min-height: 93px;
+    margin-left: 29px;
+    margin-right: 34px;
   }
 
   .video__button--subtitles {
-    width: 30px;
+    margin-left: 2px;
+    margin-right: 14px;
   }
 
   .video__button--fullscreen {
-    width: 100px;
+    margin-left: 10px;
+    margin-right: 34px;
   }
 
   .video__progress {
@@ -171,11 +178,11 @@
 @media (min-width: @desktop-width) {
   .video {
     width: 800px;
-    margin-bottom: 121px;
+    margin-bottom: 115px;
   }
 
   .video__headline {
-    margin: 70px auto 0;
+    margin: 65px auto 0;
   }
 
   .video__text {
